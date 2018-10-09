@@ -1,7 +1,11 @@
 public class PostFixStringFilter implements  StringFilter {
 
     @Override
-    public void StringFilter(String string) {
+    public String filter(String string) {
+
+        int length = string.length();
+        int n;
+        return string.substring(length-n, length);
 
     }
 }
