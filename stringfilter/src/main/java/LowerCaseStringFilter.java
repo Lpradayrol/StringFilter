@@ -1,7 +1,10 @@
 public class LowerCaseStringFilter implements StringFilter {
 
     @Override
-    public void StringFilter(String string) {
-        System.out.println(string.toLowerCase());
+    public String filter(String string) {
+
+        //System.out.println(string.toLowerCase());
+        return string.toLowerCase();
+
     }
 }

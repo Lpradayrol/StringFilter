@@ -1,7 +1,8 @@
 public class UpperCaseStringFilter implements StringFilter {
 
     @Override
-    public void StringFilter(String string) {
-        System.out.println(string.toUpperCase());
+    public String filter(String string) {
+        //System.out.println(string.toUpperCase());
+        return string.toUpperCase();
     }
 }
