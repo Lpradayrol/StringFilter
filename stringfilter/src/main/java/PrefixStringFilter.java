@@ -1,15 +1,15 @@
-import java.util.Scanner;
-
 public class PrefixStringFilter implements StringFilter {
+
+    int sizeOfPrefix;
+
+    public PrefixStringFilter(int sizeOfPrefix) {
+        this.sizeOfPrefix = sizeOfPrefix;
+    }
 
     @Override
     public String filter(String string) {
 
-        Scanner c = new Scanner(System.in);
-        System.out.println("Entrer nombre: ");
-        int n = c.nextInt();
-        System.out.println(string.substring(0,n));
+        return string.substring(0,sizeOfPrefix);
 
-        return string.substring(0,n);
     }
 }
