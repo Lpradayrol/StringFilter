@@ -1,3 +1,5 @@
 public interface StringFilter {
-    public void StringFilter(String string);
+
+    String filter(String string);
+
 }
