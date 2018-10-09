@@ -7,33 +7,39 @@ public class StringFilterTest {
 
     @Test
     public void UpperCaseStringFilterTest() {
+
         String input = "toto";
         StringFilter filter = new UpperCaseStringFilter();
         String output = filter.filter(input);
+
         assertThat(output, equalTo("TOTO"));
     }
 
     @Test
-    public void LowerCaseStringFilterTest(){
+    public void LowerCaseStringFilterTest() {
+
         String input = "TITI";
         StringFilter filter = new LowerCaseStringFilter();
         String output = filter.filter(input);
+
         assertThat(output, equalTo("titi"));
     }
 
     @Test
-    public void PrefixStringFilterTest(){
+    public void PrefixStringFilterTest() {
+
         String input = "ecologie";
-        StringFilter filter = new PrefixStringFilter();
+        StringFilter filter = new PrefixStringFilter(3);
         String output = filter.filter(input);
 
         assertThat(output, equalTo("eco"));
     }
 
     @Test
-    public void PostfixStringFilterTest(){
+    public void PostfixStringFilterTest() {
+
         String input = "millionaire";
-        StringFilter filter = new PostFixStringFilter();
+        StringFilter filter = new PostFixStringFilter(4);
         String output = filter.filter(input);
 
         assertThat(output, equalTo("aire"));
